@@ -1,4 +1,4 @@
-package com.soket.exam;
+package com.soket.exam.controller;
 
 import java.util.Locale;
 
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class MainController {
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "/main.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		return "play";
 	}
