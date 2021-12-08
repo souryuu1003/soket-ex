@@ -5,10 +5,12 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+<form method="post" action="play.do">
+	<input type="text" name="memberId">
+	<input type="text" name="memberName">
+	<input type="text" name="mmemberPhone">
+	<input type="submit" value="play!">
+</form>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>

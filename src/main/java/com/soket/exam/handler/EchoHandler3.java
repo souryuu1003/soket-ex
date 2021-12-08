@@ -45,7 +45,7 @@ public class EchoHandler3 extends TextWebSocketHandler {
 		// 너가 로그인따로 시키면 되자나
 		// ㅇㅋ 일단 알겠음
 		
-		logger.debug("Chatting List Response");
+		logger.info("Chatting List Response");
 	}
 	
 	@Override

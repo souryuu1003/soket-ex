@@ -40,7 +40,7 @@ public class EchoHandler4 extends TextWebSocketHandler {
 		mDTO.setMemberSession(session.getId());		
 		memberList.add(mDTO);
 		
-		logger.debug("Chatting List Response");
+		logger.info("Chatting List Response");
 	}
 	
 	// 두더지 위치 랜덤으로 정하여 뿌림

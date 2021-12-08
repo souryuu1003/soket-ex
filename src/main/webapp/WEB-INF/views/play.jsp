@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/play.js"></script>
 <script src="https://cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
 <link href="css/play.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="vendor/fontawesome-free-5.8.2-web/css/all.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free-5.8.2-web/css/all.min.css"> -->
 <html>
 <head>
 <title>ITKey 메신저</title>
@@ -35,9 +35,8 @@ function listMessage(){
 		status = strArray[6];
 		statVal = strArray[7];
 		
-		if(picture==null) {
+		
 			picture = "https://ptetutorials.com/images/user-profile.png";
-		}
         
         if(status == "list") {
         	// 웹소켓에 연결이 성립되고 회원목록을 출력할 때
