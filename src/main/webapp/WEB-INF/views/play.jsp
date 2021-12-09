@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/play.js"></script>
 <script src="https://cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
 <link href="css/play.css" rel="stylesheet">
@@ -9,6 +9,7 @@
 <head>
 <title>ITKey 메신저</title>
 <script>
+// 스크립트 여기에 적은 이유 있음? 있엇나.. ㅇㅋ;;;근데 왠지 dom을 못불러와서 그랫을수도 1년전 코드라 가물가물하다 ㅇㅋㅇㅋ
 //웹소켓 연결 (com.itkey.sam의 EchoHandler3,4 사용)
 var sockls = new SockJS("<c:url value="/echo3"/>");
 var sockPlay = new SockJS("<c:url value="/echo4"/>");
@@ -28,15 +29,17 @@ function listMessage(){
 		
 		itemset = strArray[0];
 		memberid = strArray[1];
-		picture = "images/" + strArray[2];			
+		picture = "images/" + strArray[2];
+		//이게 원래 회원가입할때 사진 저장되는걸로 불러오는거여 오...
 		sessionid = strArray[3];
 		total = strArray[4];
 		now = strArray[5];
 		status = strArray[6];
 		statVal = strArray[7];
 		
-		
+		if(picture==null) {
 			picture = "https://ptetutorials.com/images/user-profile.png";
+		}
         
         if(status == "list") {
         	// 웹소켓에 연결이 성립되고 회원목록을 출력할 때
